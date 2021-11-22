@@ -1,7 +1,7 @@
 /*
  * Fibonacci numbers defined recursively
  */
-#include "fib.h"
+#include "..\include\fib.h"
 
 #include <assert.h>		/* assert */
 #include <stdio.h>		/* printf */
@@ -11,15 +11,14 @@ int fib (int n, int p, int pp)
 {
     if (n == 1)
     {
-        /* code */
+        return p;
     }
     else if (n == 2)
     {
-        /* code */
+        return pp;
     }
     else
     {
-        // Code
+        return fib(n-1, pp, pp + p);
     }
-    
 }
