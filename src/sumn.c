@@ -1,8 +1,18 @@
-#include "sumn.h"
+#include "..\include\sumn.h"
 
 #include<stdio.h>
 
 int sumn (int n)
 {
-    return 0;
+    int sum;
+    if (n > 1)
+    {
+        sum = (2 * n - 1) + sumn(n - 1);
+    }
+    else
+    {
+        sum = 1;
+    }
+
+    return sum;
 }
