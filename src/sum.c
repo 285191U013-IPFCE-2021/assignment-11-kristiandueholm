@@ -21,16 +21,16 @@ int sumtail (int n, int total)
   assert(n >= 1);
 
   // Recursive case:
-  if (n > 1)
+  if (n == 1)
   {
-    return sumtail(n - 1, n + total);
+    return (1 + total);
   }
 
   // Base case:
   // n == 1
   else
   {
-    return (1 + total);
+    return sumtail(n - 1, n + total);
   }
 }
 
